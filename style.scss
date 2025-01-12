@@ -1,0 +1,79 @@
+/* 
+**
+* Avaiable fonts:
+* font-family: 'Aclonica', sans-serif;
+* font-family: 'Roboto', sans-serif;
+**
+*/
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+body {
+  padding: 0;
+  margin: 0;
+  font-family: "Roboto", sans-serif;
+}
+img {
+  max-width: 100%;
+}
+.hero {
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.8)),
+    url("./img/hero-banner-image-1.jpg");
+  background-size: cover;
+  background-position: center;
+  padding: 90px 15px;
+  .hero-container {
+    text-align: center;
+    max-width: 1000px;
+    margin: 0 auto;
+    h1 {
+      color: rgba(255, 255, 255, 0.55);
+      font-family: "Aclonica", sans-serif;
+      font-size: 30px;
+      margin: 0;
+      @media (min-width: 768px) {
+        font-size: 70px;
+      }
+    }
+    p {
+      color: #fff;
+      font-size: 22px;
+    }
+    a {
+      text-decoration: none;
+      background-color: #7f53ac;
+      background-image: linear-gradient(315deg, #7f53ac 0%, #647dee 74%);
+      color: #fff;
+      padding: 12px 30px;
+      display: inline-block;
+      text-transform: uppercase;
+      border-radius: 25px;
+      transition: all 0.9s ease;
+      &:hover {
+        background-color: #42378f;
+        background-image: linear-gradient(315deg, #42378f 0%, #f53844 74%);
+        color: #000000;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.9),
+          0 6px 20px 0 rgba(0, 0, 0, 0.9);
+      }
+    }
+  }
+}
+
+// for animation effects only
+.hero {
+  .hero-container {
+    h1 {
+      opacity: 0;
+      filter: blur(3px);
+      transition: all 1850ms ease-in;
+      &.loaded {
+        opacity: 1;
+        filter: blur(0);
+      }
+    }
+  }
+}
